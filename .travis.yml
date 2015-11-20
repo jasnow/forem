@@ -1,5 +1,6 @@
 language: ruby
 before_script: bundle exec rake forem:dummy_app --trace
+cache: bundler
 script: bundle exec rspec spec
 sudo: false
 env:
@@ -7,7 +8,6 @@ env:
   - DB=mysql
   - DB=sqlite
 rvm:
-  - 2.2.1
+  - 2.2.3
   - 2.1.5
   - 2.0.0
-
